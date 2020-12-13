@@ -24,31 +24,36 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta name="description" content="每个人都处于无知之末">
-<meta property="og:type" content="website">
-<meta property="og:title" content="お帰り、ドクター。">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="1.Part I 基础1.1序言这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱写在博客你可能也不会去看。 这一次是结构体，为什么连这个都要写呢？因为结构体里会有比较多容易混淆的东西，就比如我以为&#x3D;&#x3D;struct&#x3D;&#x3D;是可以换成别的东西，而没有认识到这是个关键字 而我刚开始就是轻视了这一块，独自去编译器里探索 探索了个寂寞 再然后，只能老老实实看老师的视频 在此写下笔记，以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c++笔记[结构体]">
+<meta property="og:url" content="http://example.com/2020/11/29/c++%E7%AC%94%E8%AE%B0[%E7%BB%93%E6%9E%84%E4%BD%93]md/index.html">
 <meta property="og:site_name" content="お帰り、ドクター。">
-<meta property="og:description" content="每个人都处于无知之末">
+<meta property="og:description" content="1.Part I 基础1.1序言这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱写在博客你可能也不会去看。 这一次是结构体，为什么连这个都要写呢？因为结构体里会有比较多容易混淆的东西，就比如我以为&#x3D;&#x3D;struct&#x3D;&#x3D;是可以换成别的东西，而没有认识到这是个关键字 而我刚开始就是轻视了这一块，独自去编译器里探索 探索了个寂寞 再然后，只能老老实实看老师的视频 在此写下笔记，以">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/Makri-hub/WolpersHome.github.io/PicGo/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201211173838.png">
+<meta property="article:published_time" content="2020-11-29T03:06:08.000Z">
+<meta property="article:modified_time" content="2020-12-13T15:11:32.612Z">
 <meta property="article:author" content="AyaBrochure">
+<meta property="article:tag" content="-c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/Makri-hub/WolpersHome.github.io/PicGo/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201211173838.png">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/11/29/c++%E7%AC%94%E8%AE%B0[%E7%BB%93%E6%9E%84%E4%BD%93]md/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>お帰り、ドクター。</title>
+  <title>c++笔记[结构体] | お帰り、ドクター。</title>
   
 
 
@@ -173,7 +178,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -186,6 +191,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Part-I-%E5%9F%BA%E7%A1%80"><span class="nav-number">1.</span> <span class="nav-text">1.Part I 基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1%E5%BA%8F%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">1.1序言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%BB%93%E6%9E%84%E4%BD%93%E2%80%9C%E5%A4%8D%E5%88%B6%E2%80%9D"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 结构体“复制”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E7%BB%93%E6%9E%84%E4%BD%93%E4%BD%9C%E5%BD%A2%E5%8F%82"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 结构体作形参</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4%E5%85%B3%E4%BA%8Enew%E5%92%8Cdelete"><span class="nav-number">1.4.</span> <span class="nav-text">1.4关于new和delete</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-1%E5%85%B3%E4%BA%8Edelete%E4%B9%8B%E5%90%8E"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.4.1关于delete之后</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-2%E5%80%BC%E5%BE%97%E6%B3%A8%E6%84%8F%E7%9A%84delete-%E6%95%B0%E7%BB%84"><span class="nav-number">1.4.2.</span> <span class="nav-text">1.4.2值得注意的delete []数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Part-II-%E9%93%BE%E8%A1%A8"><span class="nav-number">2.</span> <span class="nav-text">2.Part II 链表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">2.1定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2%E7%94%A8%E6%B3%95"><span class="nav-number">2.2.</span> <span class="nav-text">2.2用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3%E6%93%8D%E4%BD%9C"><span class="nav-number">2.3.</span> <span class="nav-text">2.3操作</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-1%E7%BB%93%E6%9E%84%E4%BD%93%E4%BD%9C%E5%BD%A2%E5%8F%82"><span class="nav-number">2.3.1.</span> <span class="nav-text">2.3.1结构体作形参</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-2%E8%BE%93%E5%85%A5"><span class="nav-number">2.3.2.</span> <span class="nav-text">2.3.2输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-3%E6%8F%92%E5%85%A5%E3%80%81%E5%88%A0%E9%99%A4"><span class="nav-number">2.3.3.</span> <span class="nav-text">2.3.3插入、删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-4%E4%BA%A4%E6%8D%A2%E9%A1%BA%E5%BA%8F"><span class="nav-number">2.3.4.</span> <span class="nav-text">2.3.4交换顺序</span></a></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -250,11 +256,12 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
       
 
       
-    
+
+  
 
 
 <div class="post-block">
@@ -274,10 +281,9 @@
       <meta itemprop="name" content="お帰り、ドクター。">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/29/c++%E7%AC%94%E8%AE%B0%5B%E7%BB%93%E6%9E%84%E4%BD%93%5Dmd/" class="post-title-link" itemprop="url">c++笔记[结构体]</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          c++笔记[结构体]
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -321,7 +327,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="1-Part-I-基础"><a href="#1-Part-I-基础" class="headerlink" title="1.Part I 基础"></a>1.Part I 基础</h2><h3 id="1-1序言"><a href="#1-1序言" class="headerlink" title="1.1序言"></a>1.1序言</h3><p>这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱<del>写在博客你可能也不会去看</del>。</p>
+        <h2 id="1-Part-I-基础"><a href="#1-Part-I-基础" class="headerlink" title="1.Part I 基础"></a>1.Part I 基础</h2><h3 id="1-1序言"><a href="#1-1序言" class="headerlink" title="1.1序言"></a>1.1序言</h3><p>这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱<del>写在博客你可能也不会去看</del>。</p>
 <p>这一次是结构体，为什么连这个都要写呢？因为结构体里会有比较多容易混淆的东西，就比如我以为==struct==是可以换成别的东西，而没有认识到这是个关键字</p>
 <p>而我刚开始就是轻视了这一块，独自去编译器里探索</p>
 <p>探索了个寂寞</p>
@@ -409,7 +415,6 @@
 <p>以上，写得比较菜，定有疏漏之处，还恳请各位轻喷。比如链表的那两个“必须额外再复制两个指针”是否可以简化点思路？是否尝试过复制结构体的方法？</p>
 <p>文章实质上可能是期末复习笔记之类的，凑合着像一篇教程</p>
 
-      
     </div>
 
     
@@ -417,337 +422,44 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/23/c++%E7%AC%94%E8%AE%B0[%E6%95%B0%E7%BB%84]/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/11/23/c++%E7%AC%94%E8%AE%B0%5B%E6%95%B0%E7%BB%84%5D/" class="post-title-link" itemprop="url">C++笔记[数组]</a>
-        </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-23 23:46:47" itemprop="dateCreated datePublished" datetime="2020-11-23T23:46:47+08:00">2020-11-23</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-13 23:11:25" itemprop="dateModified" datetime="2020-12-13T23:11:25+08:00">2020-12-13</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>AyaBrochure
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2020/11/29/c++%E7%AC%94%E8%AE%B0[%E7%BB%93%E6%9E%84%E4%BD%93]md/" title="c++笔记[结构体]">http://example.com/2020/11/29/c++笔记[结构体]md/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-        </div>
-      </header>
+          <div class="post-tags">
+              <a href="/tags/c/" rel="tag"># -c++</a>
+          </div>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一-数组的各种符号，摸清楚"><a href="#一-数组的各种符号，摸清楚" class="headerlink" title="一.数组的各种符号，摸清楚"></a>一.数组的各种符号，摸清楚</h2><h3 id="1-1为什么会有这篇笔记呢？数组没学好"><a href="#1-1为什么会有这篇笔记呢？数组没学好" class="headerlink" title="1.1为什么会有这篇笔记呢？数组没学好"></a>1.1为什么会有这篇笔记呢？数组没学好</h3><hr>
-<h3 id="1-2起步"><a href="#1-2起步" class="headerlink" title="1.2起步"></a>1.2起步</h3><img src="https://i.loli.net/2020/11/24/5hOA8Pt3DSMH7bf.png" style="zoom:125%;" />
-
-<p>首先记住上图，[]表示数组取值运算符。地址可以“无限”加下去（有限的无限）</p>
-<p>它们对应的代码是这样的：（main函数省略）</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[] = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">6</span>,<span class="number">7</span> &#125;;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(a) / <span class="keyword">sizeof</span>(<span class="keyword">int</span>); i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt; a[i] &lt;&lt; <span class="string">&#x27;,&#x27;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&#x27;\n&#x27;</span> &lt;&lt; <span class="string">&quot;a表示&quot;</span> &lt;&lt; a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;*a表示&quot;</span> &lt;&lt; *a &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;a[0]表示&quot;</span> &lt;&lt; a[<span class="number">0</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;a[1]表示&quot;</span> &lt;&lt; a[<span class="number">1</span>] &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;a+1表示&quot;</span> &lt;&lt; a + <span class="number">1</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;a+6表示&quot;</span> &lt;&lt; a + <span class="number">6</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;交换数组首尾&quot;</span> &lt;&lt; <span class="built_in">endl</span>;</span><br></pre></td></tr></table></figure>
-
-<h3 id="1-3交换函数"><a href="#1-3交换函数" class="headerlink" title="1.3交换函数"></a>1.3交换函数</h3><p>记住正常的交换函数，用指针从实质地指向值，与以前的区别在于，指针直接对应值，绕开了字母变量。也就是指针（十六进制地址）上有一个值（char,int,double等）</p>
-<p>以下x,y是十六进制的地址，*x为指向的变量。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(T* x, T* y)</span> <span class="comment">//交换指针指向的变量</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	T t = *x;<span class="comment">//t赋值为x指向的变量</span></span><br><span class="line">	*x = *y;<span class="comment">//将y的值赋给x</span></span><br><span class="line">	*y = t;<span class="comment">//y得到变量t的值</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>这里又想到取址符&amp;，那这样一来，以前的”int a= 5;”中a与值，与指针，之间是什么关系？</p>
-<p>1.T* a与T a平级，没有依赖关系，定义时，均可以不初始化，而且对应量都是随机的（十六进制数0xcccccccc[???]和随机的T类型内容（但为什么每次都是固定的一个数呢？））</p>
-<p>2.两者指向同一对象时，用&amp;联系起来。&amp;普通变量=变量的地址。</p>
-<p>明白以上两点，数组就好理解了。交换地址上的值，实际上是以指针形式表达变量（因为指针也是变量），并进行着类似以前”int t = a,a =b, b=t;”的操作。而此处具体可以表达为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">普通变量的值 &#x3D; 指针1上的值</span><br><span class="line"></span><br><span class="line">指针1上的值 &#x3D; 指针2上的值</span><br><span class="line"></span><br><span class="line">指针2上的值 &#x3D; 普通变量的值</span><br></pre></td></tr></table></figure>
-
-<p>完成交换。</p>
-<p>▲注意交换完后，原数组会变化！</p>
-<p>因此最好使用以下函数进行备份</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">backup</span><span class="params">(<span class="keyword">int</span> a[],<span class="keyword">int</span> p[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(<span class="keyword">int</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i&lt;n;i++)</span><br><span class="line">        p[i] = a[i];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;<span class="comment">//未试过能否运行，思路是这个就差不多了，遍历复制。</span></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="二-探索函数与数组的激烈摩擦"><a href="#二-探索函数与数组的激烈摩擦" class="headerlink" title="二.探索函数与数组的激烈摩擦"></a>二.探索函数与数组的激烈摩擦</h2><h3 id="2-1数组在函数中的写法"><a href="#2-1数组在函数中的写法" class="headerlink" title="2.1数组在函数中的写法"></a>2.1数组在函数中的写法</h3><p>就像指针在函数的参数位置，表达为T* m一样神奇，数组的首地址表达为T m[]</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">sort_order</span><span class="params">(T m[],<span class="keyword">int</span> size)</span><span class="comment">//因为数组不能引用而只能用指针!!!</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = size / <span class="keyword">sizeof</span>(T);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= len; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = i+<span class="number">1</span>; j &lt;= len; j++)</span><br><span class="line">			<span class="keyword">if</span> (m[i - <span class="number">1</span>] &lt; m[j - <span class="number">1</span>])</span><br><span class="line">				pin_swap(m + i - <span class="number">1</span>, m + j - <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>不要写T *m[]！！m[]本身就是个地址！如果这么干，你需要给它喂指针的地址（类型是T **，双星啊）（叶莲娜：“？”）</p>
-<h3 id="2-2标识符"><a href="#2-2标识符" class="headerlink" title="2.2标识符"></a>2.2标识符</h3><p><strong>标识符</strong>是c++中由字母（A-Z，a-z）、数字（0-9）、下划线“_”组成，并且首字符不能是数字，但可以是字母或者下划线，例如”len = 10”中len就是标识符。<strong>指针也是标识符</strong>，指针有自己的地址。</p>
-<p>下午使用选择排序函数+交换函数的顺序时，编译器最后一声轰鸣：“选择排序函数它找不到标识符！！”</p>
-<p>查了下百度，当初我是不信的，后来把它们换了下顺序，程序duang的一下运行了，并且成功排序。</p>
-<p><img src="https://raw.githubusercontent.com/Makri-hub/WolpersHome.github.io/PicGo/%E8%B0%83%E5%92%8C%E5%9B%BE%E7%89%87.png"></p>
-<p>啊，用html调节图片好难受，远没有word功能多，原则上还是少用图片吧。</p>
-<p>这期间借鉴了：</p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41573234/article/details/80297995">HTML——添加图像、设置图像属性_时光·漫步的博客-CSDN博客</a></p>
-<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zfx1101804091/article/details/108749605">Typora关于 插入图片 居中 靠左 靠右设置_zfx1101804091的博客-CSDN博客_typora 图片居中</a></p>
-<p>来帮助设置图片。</p>
-<h3 id="2-3字符数组"><a href="#2-3字符数组" class="headerlink" title="2.3字符数组"></a>2.3字符数组</h3><p>以下这段关于字符数组的连接，出现了严重的问题。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">mystrcat</span><span class="params">(<span class="keyword">char</span>* strDest, <span class="keyword">const</span> <span class="keyword">char</span>* strSrc)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n = <span class="built_in">strlen</span>(strDest);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; strSrc[i] != <span class="string">&#x27;\0&#x27;</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> ((<span class="string">&#x27;A&#x27;</span> &lt;= strSrc[i] &lt;= <span class="string">&#x27;Z&#x27;</span> )|| (<span class="string">&#x27;a&#x27;</span> &lt;= strSrc[i] &lt;= <span class="string">&#x27;z&#x27;</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			*(strDest + n +i) = strSrc[i];</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> strDest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>问题一：在c++中不能使用类似a&lt;=x&lt;=b、a&lt;x&lt;b这样的判断语句，拿a&lt;x&lt;b为例，c++中大小、等、不等判断符的<strong>结合性</strong>均为从左往右，判别式的逻辑是：</p>
-<p>a&lt;x否？否，则化为0&lt;b；是，化为1&lt;b；</p>
-<p>然后1&lt;b否？否，则为0；是，化为1。此处不再做过多赘述。</p>
-<p>问题二：指针的移动没有处理好（具体点说，是这个int i不好用）            </p>
-<p>在这里应该设置两个指针（或者两个自增变量），一个i，在strDest上移动，一个j，在strSrc上移动；而这里仅有一个i，无论如何都会自增，导致strSrc上的位置错误，显示是乱码变了（一个乱码汉字变成另一个乱码汉字，因为汉字对应的编码变了，但笔者还没学汉字的编码，只能先搁着之后再回来补充）</p>
-<h3 id="2-4指针和数组（待补）"><a href="#2-4指针和数组（待补）" class="headerlink" title="2.4指针和数组（待补）"></a>2.4指针和数组（待补）</h3><p>如果有（main函数省略）</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> a[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span>* p  = a;</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
-
-<p>这是常见的操作，那么：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(p[<span class="number">1</span>] ==a[<span class="number">1</span>])</span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;p[1]表达意思与a[1]相同\n&quot;</span>;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;p[1]值为：&quot;</span>&lt;&lt;p[<span class="number">1</span>]&lt;&lt;<span class="string">&quot;\na[1]值为：&quot;</span>&lt;&lt;a[<span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span> <span class="built_in">cout</span> &lt;&lt; <span class="string">&quot;p[1]表达意思与a[1]不同&quot;</span>;</span><br></pre></td></tr></table></figure>
-
-<p>大家猜猜输出的是哪个？</p>
-<p>答案是第一个，相同，对应值是都是5。</p>
-<p>为什么“指针名[n]”可以表示“数组名[n]”，首先我认为数组a本身是个指针</p>
-<p>而这个认识，就是二维数组的基础</p>
-<p>这里留个坑，留下一张图给大家细细品味，注意“类型”一栏。</p>
-<p><img src="https://raw.githubusercontent.com/Makri-hub/WolpersHome.github.io/PicGo/%E8%AF%A1%E5%BC%82.png"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="post-title-link" itemprop="url">我的第一篇文章</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-21 12:46:47" itemprop="dateCreated datePublished" datetime="2020-11-21T12:46:47+08:00">2020-11-21</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-11-24 21:15:28" itemprop="dateModified" datetime="2020-11-24T21:15:28+08:00">2020-11-24</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>始于2020</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/23/c++%E7%AC%94%E8%AE%B0%5B%E6%95%B0%E7%BB%84%5D/" rel="prev" title="C++笔记[数组]">
+                  <i class="fa fa-chevron-left"></i> C++笔记[数组]
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
     </footer>
   </article>
 </div>
 
 
 
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/20/%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/20/%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">测试页面</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-20 23:44:47" itemprop="dateCreated datePublished" datetime="2020-11-20T23:44:47+08:00">2020-11-20</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-11-22 00:29:54" itemprop="dateModified" datetime="2020-11-22T00:29:54+08:00">2020-11-22</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>32</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这个页面是用来测试的，是因第一次Hexo一片空白而产生的测试页面</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-
-  
 
 
 
