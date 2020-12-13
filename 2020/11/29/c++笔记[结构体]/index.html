@@ -24,16 +24,16 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta name="description" content="1.Part I 基础1.1序言这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱写在博客你可能也不会去看。 这一次是结构体，为什么连这个都要写呢？因为结构体里会有比较多容易混淆的东西，就比如我以为&#x3D;&#x3D;struct&#x3D;&#x3D;是可以换成别的东西，而没有认识到这是个关键字 而我刚开始就是轻视了这一块，独自去编译器里探索 探索了个寂寞 再然后，只能老老实实看老师的视频 在此写下笔记，以">
+  <meta name="description" content="1.Part I 基础1.1序言这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱写在博客你可能也不会去看。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="c++笔记[结构体]">
 <meta property="og:url" content="http://example.com/2020/11/29/c++%E7%AC%94%E8%AE%B0[%E7%BB%93%E6%9E%84%E4%BD%93]/index.html">
 <meta property="og:site_name" content="お帰り、ドクター。">
-<meta property="og:description" content="1.Part I 基础1.1序言这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱写在博客你可能也不会去看。 这一次是结构体，为什么连这个都要写呢？因为结构体里会有比较多容易混淆的东西，就比如我以为&#x3D;&#x3D;struct&#x3D;&#x3D;是可以换成别的东西，而没有认识到这是个关键字 而我刚开始就是轻视了这一块，独自去编译器里探索 探索了个寂寞 再然后，只能老老实实看老师的视频 在此写下笔记，以">
+<meta property="og:description" content="1.Part I 基础1.1序言这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱写在博客你可能也不会去看。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://raw.githubusercontent.com/Makri-hub/WolpersHome.github.io/PicGo/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20201211173838.png">
 <meta property="article:published_time" content="2020-11-29T03:06:08.000Z">
-<meta property="article:modified_time" content="2020-12-13T15:10:42.472Z">
+<meta property="article:modified_time" content="2020-12-13T15:54:01.582Z">
 <meta property="article:author" content="AyaBrochure">
 <meta property="article:tag" content="-笔记">
 <meta name="twitter:card" content="summary">
@@ -300,7 +300,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-13 23:10:42" itemprop="dateModified" datetime="2020-12-13T23:10:42+08:00">2020-12-13</time>
+        <time title="修改时间：2020-12-13 23:54:01" itemprop="dateModified" datetime="2020-12-13T23:54:01+08:00">2020-12-13</time>
       </span>
 
   
@@ -328,6 +328,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <h2 id="1-Part-I-基础"><a href="#1-Part-I-基础" class="headerlink" title="1.Part I 基础"></a>1.Part I 基础</h2><h3 id="1-1序言"><a href="#1-1序言" class="headerlink" title="1.1序言"></a>1.1序言</h3><p>这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱<del>写在博客你可能也不会去看</del>。</p>
+<a id="more"></a>
+
 <p>这一次是结构体，为什么连这个都要写呢？因为结构体里会有比较多容易混淆的东西，就比如我以为==struct==是可以换成别的东西，而没有认识到这是个关键字</p>
 <p>而我刚开始就是轻视了这一块，独自去编译器里探索</p>
 <p>探索了个寂寞</p>
