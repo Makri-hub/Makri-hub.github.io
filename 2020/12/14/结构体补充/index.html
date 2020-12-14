@@ -24,31 +24,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"8.0.2","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}};
   </script>
 
-  <meta name="description" content="每个人都处于无知之末">
-<meta property="og:type" content="website">
+  <meta name="description" content="结构体补充 123456789101112131415161718Student* loadData(int&amp; n)&#x2F;&#x2F;考虑做存档功能&amp;#123;	n &#x3D; 0;&#x2F;&#x2F;之前的数据全部清零	int No; char Name[20]; double Score[3];	Student* T &#x3D; new Student;&#x2F;&#x2F;只有Student T是在运行时栈上，会被销毁	Student* mp2">
+<meta property="og:type" content="article">
 <meta property="og:title" content="お帰り、ドクター。">
-<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:url" content="http://example.com/2020/12/14/%E7%BB%93%E6%9E%84%E4%BD%93%E8%A1%A5%E5%85%85/index.html">
 <meta property="og:site_name" content="お帰り、ドクター。">
-<meta property="og:description" content="每个人都处于无知之末">
+<meta property="og:description" content="结构体补充 123456789101112131415161718Student* loadData(int&amp; n)&#x2F;&#x2F;考虑做存档功能&amp;#123;	n &#x3D; 0;&#x2F;&#x2F;之前的数据全部清零	int No; char Name[20]; double Score[3];	Student* T &#x3D; new Student;&#x2F;&#x2F;只有Student T是在运行时栈上，会被销毁	Student* mp2">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-14T12:59:28.801Z">
+<meta property="article:modified_time" content="2020-12-14T13:04:19.736Z">
 <meta property="article:author" content="AyaBrochure">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2020/12/14/%E7%BB%93%E6%9E%84%E4%BD%93%E8%A1%A5%E5%85%85/">
 
 
 <script class="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>お帰り、ドクター。</title>
+  <title> | お帰り、ドクター。</title>
   
 
 
@@ -247,11 +249,12 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
       
 
       
-    
+
+  
 
 
 <div class="post-block">
@@ -271,10 +274,9 @@
       <meta itemprop="name" content="お帰り、ドクター。">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2020/12/14/%E7%BB%93%E6%9E%84%E4%BD%93%E8%A1%A5%E5%85%85/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -312,7 +314,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>结构体补充</p>
+        <p>结构体补充</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function">Student* <span class="title">loadData</span><span class="params">(<span class="keyword">int</span>&amp; n)</span><span class="comment">//考虑做存档功能</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	n = <span class="number">0</span>;<span class="comment">//之前的数据全部清零</span></span><br><span class="line">	<span class="keyword">int</span> No; <span class="keyword">char</span> Name[<span class="number">20</span>]; <span class="keyword">double</span> Score[<span class="number">3</span>];</span><br><span class="line">	Student* T = <span class="keyword">new</span> Student;<span class="comment">//只有Student T是在运行时栈上，会被销毁</span></span><br><span class="line">	Student* mp2 = T;</span><br><span class="line">	FILE* fp = fopen(<span class="string">&quot;./学生成绩单.txt&quot;</span>, <span class="string">&quot;r&quot;</span>);</span><br><span class="line"><span class="keyword">while</span> (!feof(fp)) </span><br><span class="line">    <span class="comment">//feof（）检测一个文件是否结束，即到达文件尾，若结束，则返回非0值，否则返回0</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="built_in">fscanf</span>(fp, <span class="string">&quot;%d\t%s\t%lf\t%lf\t%lf\n&quot;</span>, &amp;No, Name, Score, Score + <span class="number">1</span>, Score + <span class="number">2</span>);</span><br><span class="line">	mp2-&gt;No = No; strcpy_s(mp2-&gt;Name, Name); mp2-&gt;score[<span class="number">0</span>] = Score[<span class="number">0</span>]; mp2-&gt;score[<span class="number">1</span>] = Score[<span class="number">1</span>]; mp2-&gt;score[<span class="number">2</span>] = Score[<span class="number">2</span>];</span><br><span class="line">	mp2-&gt;next = <span class="keyword">new</span> Student;</span><br><span class="line">	mp2 = mp2-&gt;next;</span><br><span class="line">	mp2-&gt;next = <span class="literal">nullptr</span>;<span class="comment">//使成员next变为nullptr，这才是真正的封装，下面那个不算，只是指针归零，方便下次再用。</span></span><br><span class="line">	n++;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>问题代码：多出一组屯屯屯</p>
 <p>原因出于在已new了一组空的结构体，按while内逻辑，会多出一个“给下一组数据准备的空间”，无论多少组都是，结束循环后会多出一组空结构体，然后名字就叫“屯屯屯…（20个）”。</p>
@@ -327,7 +329,6 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;…………省略前面…………</span><br><span class="line">    <span class="keyword">int</span> overlap = <span class="number">0</span>;<span class="comment">//检测重复数量</span></span><br><span class="line">	<span class="keyword">while</span> (moving_pin != <span class="literal">nullptr</span>)</span><br><span class="line">    &#123;</span><br><span class="line">		<span class="keyword">if</span> (moving_pin-&gt;No != No)</span><br><span class="line">				overlap++;</span><br><span class="line">		moving_pin = moving_pin-&gt;next;</span><br><span class="line">		moving_pin = head;</span><br><span class="line">		(*p).next = <span class="keyword">new</span> Student;</span><br><span class="line">		p = p-&gt;next;</span><br><span class="line">		p-&gt;No = No; <span class="built_in">strcpy</span>(p-&gt;Name, Name); p-&gt;score[<span class="number">0</span>] = score[<span class="number">0</span>]; p-&gt;score[<span class="number">1</span>] = score[<span class="number">1</span>]; p-&gt;score[<span class="number">2</span>] = score[<span class="number">2</span>];</span><br><span class="line">		p-&gt;next = <span class="literal">nullptr</span>;<span class="comment">//调整了先锋指针封装末尾的顺序，原本这是在else if外面的</span></span><br><span class="line">		n++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-      
     </div>
 
     
@@ -335,373 +336,35 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/29/c++%E7%AC%94%E8%AE%B0[%E7%BB%93%E6%9E%84%E4%BD%93]/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/11/29/c++%E7%AC%94%E8%AE%B0%5B%E7%BB%93%E6%9E%84%E4%BD%93%5D/" class="post-title-link" itemprop="url">c++笔记[结构体]</a>
-        </h2>
 
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-29 11:06:08" itemprop="dateCreated datePublished" datetime="2020-11-29T11:06:08+08:00">2020-11-29</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-13 23:54:01" itemprop="dateModified" datetime="2020-12-13T23:54:01+08:00">2020-12-13</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>5.9k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>5 分钟</span>
-    </span>
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>AyaBrochure
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://example.com/2020/12/14/%E7%BB%93%E6%9E%84%E4%BD%93%E8%A1%A5%E5%85%85/" title="">http://example.com/2020/12/14/结构体补充/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
 </div>
 
-        </div>
-      </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="1-Part-I-基础"><a href="#1-Part-I-基础" class="headerlink" title="1.Part I 基础"></a>1.Part I 基础</h2><h3 id="1-1序言"><a href="#1-1序言" class="headerlink" title="1.1序言"></a>1.1序言</h3><p>这是第二篇c++笔记，原因是写在纸质笔记本上我并不会去看，写得慢还写得很乱<del>写在博客你可能也不会去看</del>。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/29/c++%E7%AC%94%E8%AE%B0%5B%E7%BB%93%E6%9E%84%E4%BD%93%5D/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/23/c++%E7%AC%94%E8%AE%B0[%E6%95%B0%E7%BB%84]/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/23/c++%E7%AC%94%E8%AE%B0%5B%E6%95%B0%E7%BB%84%5D/" class="post-title-link" itemprop="url">C++笔记[数组]</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-23 23:46:47" itemprop="dateCreated datePublished" datetime="2020-11-23T23:46:47+08:00">2020-11-23</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-13 23:20:25" itemprop="dateModified" datetime="2020-12-13T23:20:25+08:00">2020-12-13</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一-数组的各种符号，摸清楚"><a href="#一-数组的各种符号，摸清楚" class="headerlink" title="一.数组的各种符号，摸清楚"></a>一.数组的各种符号，摸清楚</h2><h3 id="1-1为什么会有这篇笔记呢？数组没学好"><a href="#1-1为什么会有这篇笔记呢？数组没学好" class="headerlink" title="1.1为什么会有这篇笔记呢？数组没学好"></a>1.1为什么会有这篇笔记呢？数组没学好</h3>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/23/c++%E7%AC%94%E8%AE%B0%5B%E6%95%B0%E7%BB%84%5D/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/11/29/c++%E7%AC%94%E8%AE%B0%5B%E7%BB%93%E6%9E%84%E4%BD%93%5D/" rel="prev" title="c++笔记[结构体]">
+                  <i class="fa fa-chevron-left"></i> c++笔记[结构体]
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="post-title-link" itemprop="url">我的第一篇文章</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-21 12:46:47" itemprop="dateCreated datePublished" datetime="2020-11-21T12:46:47+08:00">2020-11-21</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-13 23:23:44" itemprop="dateModified" datetime="2020-12-13T23:23:44+08:00">2020-12-13</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>始于2020</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/11/21/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2020/11/20/%E6%B5%8B%E8%AF%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/20201108230401.jpg">
-      <meta itemprop="name" content="AyaBrochure">
-      <meta itemprop="description" content="每个人都处于无知之末">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="お帰り、ドクター。">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/11/20/%E6%B5%8B%E8%AF%95/" class="post-title-link" itemprop="url">测试页面</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-20 23:44:47" itemprop="dateCreated datePublished" datetime="2020-11-20T23:44:47+08:00">2020-11-20</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-11-22 00:29:54" itemprop="dateModified" datetime="2020-11-22T00:29:54+08:00">2020-11-22</time>
-      </span>
-
-  
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>32</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>这个页面是用来测试的，是因第一次Hexo一片空白而产生的测试页面</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -710,11 +373,9 @@
 
 
 
-  
-
-
 
       
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -813,6 +474,25 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.css">
+
+<script>
+NexT.utils.loadComments('#gitalk-container', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1.7.0/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '26d80db942359c887549',
+      clientSecret: '2617b9ff35540f776935f110f9317f41c9e5afc6',
+      repo        : '',
+      owner       : 'Makri_BW',
+      admin       : [''],
+      id          : 'af543bf6a142b8bec43ca43aa9a3bb1c',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
